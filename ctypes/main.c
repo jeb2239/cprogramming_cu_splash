@@ -1,9 +1,21 @@
-#include <stdio.h>  // provides printf
-#include <stdlib.h> // provides malloc
+#include <stdio.h>
 
-static int a =3;
+int main(void) {
+  printf("char: %lu\n"
+         "short"
+         ": %lu\n int"
+         ": %lu\n long"
+         ": %lu\n longlong"
+         ": %lu\n ",
+         sizeof(char), sizeof(short), sizeof(int), sizeof(long),
+         sizeof(long long));
 
-int main(){
-    char* c = (char*)malloc(10*sizeof(char));
-    printf("%p\n",&a);
+  printf("float: %lu\n"
+         "double"
+         ": %lu\n long double"
+         ": %lu\n ",
+               sizeof(float),
+           sizeof(double), sizeof(long double));
+
+  return 0;
 }
